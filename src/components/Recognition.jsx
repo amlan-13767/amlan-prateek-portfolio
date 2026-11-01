@@ -1,0 +1,4 @@
+import { ExternalLink } from './icons';
+import { icons } from './icons';
+import { recognition } from '../data/content';
+export default function Recognition() { return <section className="section-wrap section-block recognition-section" id="recognition"><div className="section-heading"><span className="section-index">06 / RECOGNITION</span><h2>Milestones & <span className="gradient-text">learning.</span></h2></div><div className="recognition-list">{recognition.map((item) => { const Icon = icons[item.icon]; return <article key={item.title}><div className="recognition-icon"><Icon size={19} /></div><div><h3>{item.title}</h3><p><a className="inline-link" href={item.link} target="_blank" rel="noreferrer">{item.description} <ExternalLink size={12} /></a></p></div><span className="mono recognition-date">{item.date}</span></article>; })}</div></section>; }

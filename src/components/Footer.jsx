@@ -1,0 +1,3 @@
+import { Github, Linkedin, Mail } from './icons';
+import { profile } from '../data/content';
+export default function Footer() { return <footer className="footer section-wrap"><a className="wordmark" href="#home"><span className="mark">A<span>.</span></span><span className="wordmark-name">AMLAN PANDA</span></a><span className="mono footer-note">DESIGNED & BUILT WITH INTENTION · © {new Date().getFullYear()}</span><div className="footer-socials"><a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={17} /></a><a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={17} /></a><a href={`mailto:${profile.email}`} aria-label="Email"><Mail size={17} /></a></div></footer>; }

@@ -1,0 +1,3 @@
+import { icons } from './icons';
+import { skills } from '../data/content';
+export default function Skills() { return <section className="section-wrap section-block skills-section" id="skills"><div className="section-heading"><span className="section-index">04 / TOOLKIT</span><h2>Tools of the <span className="muted-heading">trade.</span></h2></div><div className="skills-grid">{skills.map(({ title, items, icon }) => { const Icon = icons[icon]; return <article className="skill-card" key={title}><div className="skill-title"><Icon size={18} /><h3>{title}</h3></div><div className="skill-pills">{items.map((item) => <span key={item}>{item}</span>)}</div></article>; })}</div></section>; }

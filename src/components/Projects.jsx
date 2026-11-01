@@ -1,0 +1,4 @@
+import { ArrowUpRight } from './icons';
+import { otherProjects, profile, projects } from '../data/content';
+import ProjectCard from './ProjectCard';
+export default function Projects() { return <section className="section-wrap section-block projects-section" id="projects"><div className="section-heading"><span className="section-index">03 / SELECTED WORK</span><h2>Projects with <span className="gradient-text">purpose.</span></h2><p className="section-description">A few things I’ve designed, built, and learned from.</p></div><div className="project-grid">{projects.map((item) => <ProjectCard project={item} key={item.slug} />)}</div><div className="other-projects"><h3>Other projects</h3><div className="project-grid">{otherProjects.map((item) => <ProjectCard project={item} compact key={item.slug} />)}</div></div><a className="all-projects" href={profile.github} target="_blank" rel="noreferrer">More on GitHub <ArrowUpRight size={16} /></a></section>; }

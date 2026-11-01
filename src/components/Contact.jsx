@@ -1,0 +1,3 @@
+import { ArrowUpRight, Mail, MapPin } from './icons';
+import { contact, profile } from '../data/content';
+export default function Contact() { return <section className="contact-section" id="contact"><div className="section-wrap contact-inner"><span className="section-index">07 / CONTACT</span><h2>Have a good problem?<br /><span className="gradient-text">Let’s solve it.</span></h2><p>{contact.intro}</p><a className="button button-primary contact-button" href={`mailto:${profile.email}`}>Start a conversation <ArrowUpRight size={17} /></a><div className="contact-details"><a href={`mailto:${profile.email}`}><Mail size={16} />{profile.email}</a><span><MapPin size={16} />{profile.location}</span></div></div></section>; }
