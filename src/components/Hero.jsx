@@ -2,10 +2,11 @@ import { ArrowDownRight, ArrowUpRight, Code2, Github, Linkedin, Sparkles } from 
 import { hero, profile } from '../data/content';
 
 export default function Hero() {
+  const [introPrefix, introSuffix] = hero.intro.split(profile.name);
   return <section className="hero section-wrap" id="home">
     <div className="hero-copy"><div className="eyebrow"><span className="status-dot" /> {hero.eyebrow}</div>
       <h1>Building useful<br />things with <span className="gradient-text">code<span className="period">.</span></span></h1>
-      <p className="hero-intro">{hero.intro}</p>
+      <p className="hero-intro">{introPrefix}<strong>{profile.name}</strong>{introSuffix}</p>
       <div className="hero-actions"><a className="button button-primary" href="#projects">Explore my work <ArrowDownRight size={17} /></a><a className="button button-quiet" href={profile.resume} target="_blank" rel="noreferrer">View résumé <ArrowUpRight size={16} /></a></div>
       <div className="hero-socials"><a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub"><Github size={18} /></a><a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn"><Linkedin size={18} /></a><a href={profile.leetcode} target="_blank" rel="noreferrer" aria-label="LeetCode"><Code2 size={18} /></a><span className="social-divider" /><span className="mono muted">ROURKELA, IN</span></div>
     </div>

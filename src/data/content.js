@@ -10,7 +10,7 @@ export const profile = {
 
 export const hero = {
   eyebrow: 'OPEN TO SOFTWARE & AI ROLES · CLASS OF 2027',
-  intro: "I'm Amlan — a Computer Science student at NIT Rourkela and former Software Engineer Intern at Akamai. I build AI-powered tools and full-stack products."
+  intro: "I'm Amlan Prateek Panda — a Computer Science student at NIT Rourkela and former Software Engineer Intern at Akamai. I build AI-powered tools and full-stack products."
 };
 
 export const metrics = [
@@ -41,7 +41,7 @@ export const experience = [{
   tags: ['Python', 'AI Agents', 'MCP', 'Automation', 'Security Testing']
 }];
 
-const project = (details) => ({ demo: null, image: null, ...details });
+const project = (details) => ({ demo: null, image: null, links: [], ...details });
 
 export const projects = [
   project({
@@ -94,8 +94,8 @@ export const projects = [
   project({
     slug: 'robotic-arm',
     title: 'Robotic Arm — CYBORG NIT Rourkela',
-    type: 'ROBOTICS · EMBEDDED SYSTEMS',
-    date: null, // TODO: add date
+    type: 'ROBOTICS · EMBEDDED SYSTEMS · TEAM',
+    date: 'MAY 2025 — FEB 2026',
     description: 'A modular multi-axis robotic arm prototype using ESP32-class control, TMC2209 stepper drivers, joystick input, motion-control logic, and experimental inverse kinematics.',
     highlights: [],
     stack: ['C++', 'ESP32', 'TMC2209', 'Embedded Systems', 'Robotics'],
@@ -107,23 +107,36 @@ export const projects = [
 
 export const otherProjects = [
   project({
+    slug: 'uber-rides-analysis',
+    title: 'Uber Rides Data Analysis & Dashboard',
+    type: 'DATA ANALYTICS · POWER BI',
+    date: 'SEP 2025',
+    description: 'Cleaned and analysed Uber trip data in Python — trip duration, time-of-day and monthly features — and built a Power BI dashboard on ride categories, purposes, monthly volume and mileage.',
+    highlights: [],
+    stack: ['Python', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Jupyter', 'Power BI'],
+    repo: 'https://github.com/amlan-13767/Uber-Rides-Data-Analysis',
+    links: [{ label: 'View dashboard', href: 'https://github.com/amlan-13767/Uber-Rides-Data-Analysis/blob/main/Dashboard.png' }],
+    accent: 'lime',
+    icon: 'ChartColumn'
+  }),
+  project({
     slug: 'hackstreetboys',
     title: 'HackStreetBoys — Hostel Management',
-    type: 'WEB DEVELOPMENT · HACKINNOVISION',
-    date: null,
+    type: 'WEB DEVELOPMENT · HACKINNOVISION · TEAM',
+    date: 'AUG — DEC 2024',
     description: 'Team hostel-allotment website built for HackInnovision',
     highlights: [],
     stack: ['HTML', 'CSS', 'JavaScript'],
     repo: 'https://github.com/amlan-13767/HackStreetBoys',
     accent: 'violet',
     icon: 'Globe'
-  })
+  }),
 ];
 
 export const skills = [
   { title: 'Languages', items: ['C', 'C++', 'Python', 'JavaScript', 'TypeScript', 'HTML', 'CSS'], icon: 'Code2' },
   { title: 'Frameworks', items: ['React', 'Next.js', 'Node.js', 'Express', 'Flask', 'Tailwind CSS'], icon: 'Terminal' },
-  { title: 'AI & Data', items: ['LangChain', 'RAG', 'ChromaDB', 'Sentence Transformers', 'Google Gemini', 'Perplexity API', 'MCP', 'GitHub Copilot Agent Mode', 'Pandas'], icon: 'Sparkles' },
+  { title: 'AI & Data', items: ['LangChain', 'RAG', 'ChromaDB', 'Sentence Transformers', 'Google Gemini', 'Perplexity API', 'MCP', 'GitHub Copilot Agent Mode', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn', 'Jupyter', 'Power BI'], icon: 'Sparkles' },
   { title: 'Databases & Tools', items: ['PostgreSQL', 'MongoDB', 'Redis', 'Drizzle ORM', 'Git', 'GitHub', 'Docker', 'VS Code'], icon: 'Database' },
   { title: 'Embedded', items: ['ESP32', 'Embedded C++', 'Proteus', 'PCB Design'], icon: 'Cpu' }
 ];
